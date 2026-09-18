@@ -1,0 +1,15 @@
+[Unit]
+Description=llama.cpp model manager
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/usr/bin/python3 /usr/local/bin/llama-manager.py
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

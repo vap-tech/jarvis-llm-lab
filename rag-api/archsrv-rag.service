@@ -1,0 +1,16 @@
+[Unit]
+Description=Archsrv RAG API
+After=network-online.target llama-server.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=kot
+Group=kot
+WorkingDirectory=/opt/archsrv-rag/app
+ExecStart=/opt/archsrv-rag/.venv/bin/python /opt/archsrv-rag/app/rag_api.py --config /etc/archsrv-rag/projects.json --data-root /srv/rag --llm-base-url http://127.0.0.1:8080 --host 0.0.0.0 --port 8082
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

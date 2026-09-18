@@ -1,0 +1,20 @@
+#!/bin/bash
+set -euo pipefail
+
+case "${1:-}" in
+  7b)
+    cp /etc/llama-server/model-7b.env /etc/llama-server/current.env
+    ;;
+  14b)
+    cp /etc/llama-server/model-14b.env /etc/llama-server/current.env
+    ;;
+  lite)
+    cp /etc/llama-server/model-lite.env /etc/llama-server/current.env
+    ;;
+  *)
+    echo "usage: llama-model-select {7b|14b|lite}" >&2
+    exit 1
+    ;;
+esac
+
+systemctl restart llama-server.service

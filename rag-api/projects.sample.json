@@ -1,0 +1,10 @@
+{
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "projects": [
+    {
+      "id": "proj1",
+      "label": "proj1",
+      "path": "/srv/projects/proj1"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euo pipefail
+source /etc/llama-server/current.env
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+exec /home/kot/llama.cpp/build/bin/llama-server \
+  --hf-repo "$MODEL_REPO" \
+  --hf-file "$MODEL_FILE" \
+  -ngl "$GPU_LAYERS" \
+  -c "$N_CTX" \
+  --host "$HOST" \
+  --port "$PORT"

@@ -1,0 +1,40 @@
+{
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "projects": [
+    {
+      "id": "llama-cpp",
+      "label": "llama.cpp",
+      "path": "/home/kot/llama.cpp"
+    },
+    {
+      "id": "domainfm",
+      "label": "domainfm",
+      "path": "/srv/projects/domainfm"
+    },
+    {
+      "id": "processor",
+      "label": "processor",
+      "path": "/srv/projects/processor"
+    },
+    {
+      "id": "rgw",
+      "label": "rgw",
+      "path": "/srv/projects/rgw"
+    },
+    {
+      "id": "maker",
+      "label": "maker",
+      "path": "/srv/projects/maker"
+    },
+    {
+      "id": "intel-nuc-m15-lightbar-linux",
+      "label": "intel-nuc-m15-lightbar-linux",
+      "path": "/srv/projects/intel-nuc-m15-lightbar-linux"
+    },
+    {
+      "id": "rastman",
+      "label": "rastman",
+      "path": "/srv/projects/rastman"
+    }
+  ]
+}
